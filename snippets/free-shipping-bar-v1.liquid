@@ -1,0 +1,47 @@
+{% comment %}
+  Renders an article card for a given blog with settings to either show the image or not.
+  
+  Accepts:
+  - cart: {Object} Cart object
+  - free_shipping_heading: Enter the heading
+  - free_shipping_success_message: Enter the free shipping success message
+  - free_shipping_messsage: Enter the free shipping message with $ (Note: $ will be replaced by {{free_shipping_threshold | minus: cart.total_price | money}})
+  - free_shipping_threshold: Enter the free shipping threshold
+
+  Usage:
+  {% render 'free-shpping-bar-v1' cart: cart %}
+{% endcomment %}
+
+{{ 'free-shipping-bar-v1.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+    .free-shipping-bar {
+        background-color: {{ section.settings.free_shipping_background_color | default: "#f2f0ff" }}
+    }
+
+    .free-shipping-bar__container .free-shipping-bar__filled {
+        background-color: {{ section.settings.free_shipping_background_color | default: "#afafed" }}
+    }
+{% endstyle %}
+
+{% assign cart_total = cart.total_price | divided_by: 100 %}
+{% assign free_shipping_away_price = free_shipping_threshold | minus: cart_total  %}
+{% assign free_shipping_percentage = cart.total_price | times: 1.0 | divided_by: free_shipping_threshold | at_most: 100  %}
+
+<div class="free-shipping-bar">
+  {% if cart.items.size > 0 %}
+    <div class="free-shipping-bar__heading">{{ free_shipping_heading }}</div>
+    <div class="free-shipping-bar__container">
+        <div class="free-shipping-bar__filled" style="width: {{ free_shipping_percentage }}%"> 
+            <div class="free-shipping__icon" style="left: {{ free_shipping_percentage }}%">
+                {% render "free-shipping-icon" %}
+            </div>
+        </div>
+    </div>
+    {% if cart_total >= free_shipping_threshold %}
+        <p class="free-shipping-bar__success-message">{{ free_shipping_success_message }}</p>
+    {% elsif cart_total < free_shipping_threshold %}
+        <p class="free-shipping-bar__message">{{ free_shipping_messsage | replace: '$' ,free_shipping_away_price }}</p>
+    {% endif %}
+  {% endif %}
+</div>
