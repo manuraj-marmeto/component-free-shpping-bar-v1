@@ -1463,6 +1463,52 @@
         "id": "cart_color_scheme",
         "label": "t:sections.all.colors.label",
         "default": "scheme-1"
+      },
+      {
+        "type":"header",
+        "content": "Free Shipping Settings"
+      },
+      {
+        "type":"color",
+        "id":"free_shipping_background_color",
+        "label":"Background color",
+        "default":"#f2f0ff"
+      },
+      {
+        "type":"color",
+        "id":"free_shipping_progress_bar_color",
+        "label":"Progress bar color",
+        "default":"#afafed"
+      },
+      {
+        "type":"color",
+        "id":"free_shipping_text_color",
+        "label":"Progress bar color",
+        "default":"#000000"
+      },
+      {
+        "type":"text",
+        "id":"free_shipping_heading",
+        "label":"Heading",
+        "default": "Free Shipping"
+      },
+      {
+        "type":"text",
+        "id":"free_shipping_success_message",
+        "label":"Success Message",
+        "default": "You've got free shipping 👌"
+      },
+      {
+        "type":"number",
+        "id":"free_shipping_threshold",
+        "label":"Free Shipping Threshold"
+      },
+      {
+        "type":"text",
+        "id":"free_shipping_messsage",
+        "label":"Threshold Message",
+        "default": "You're only Rs.$ away from free shipping.",
+        "info": "The $ price will be replace by away price between the cart total and cart Threshold"
       }
     ]
   }

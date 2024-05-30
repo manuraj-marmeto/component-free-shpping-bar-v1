@@ -70,6 +70,7 @@
           {% render 'icon-close' %}
         </button>
       </div>
+      {% comment %} value are coming from global cart settings {% endcomment %}
       {% render "free-shipping-bar-v1" , cart: cart,free_shipping_heading: settings.free_shipping_heading, free_shipping_success_message: settings.free_shipping_success_message , free_shipping_messsage: settings.free_shipping_messsage , free_shipping_threshold: settings.free_shipping_threshold %}
       <cart-drawer-items
         {% if cart == empty %}
