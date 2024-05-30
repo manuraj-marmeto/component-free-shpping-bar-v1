@@ -2,7 +2,7 @@
 
 This snippet provides a dynamic Free Shipping Bar component for Shopify storefronts. It informs customers of their progress towards qualifying for free shipping, enhancing their shopping experience and potentially increasing the average order value. This guide details the component's features, ideal use cases, and step-by-step implementation instructions.
 
-**Live Preview Link**: [Free Shipping Bar Preview](https://dummyimage.com/)
+**Live Preview Link**: [Free Shipping Bar Preview](https://dark-development-store.myshopify.com/?preview_theme_id=136011317410)
 
 ## Features
 
@@ -40,6 +40,9 @@ This snippet provides a dynamic Free Shipping Bar component for Shopify storefro
 
 ### step 5: 
     Add the `free-shipping-bar-v1.css` file in `cart-drawer.liquid` or `cart.liquid` 
+
+### step 6:
+    To change the settings Navigate to `Global cart Theme setting` under cart section will have option to change Free shipping settings
 
 
 ## Important Notes
