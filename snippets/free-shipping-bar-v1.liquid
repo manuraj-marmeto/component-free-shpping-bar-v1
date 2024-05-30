@@ -19,15 +19,15 @@
         create the section settings or global settings based on the based
     {% endcomment %}
     .free-shipping-bar {
-        background-color: {{ section.settings.free_shipping_background_color | default: "#f2f0ff" }};
+        background-color: {{ settings.free_shipping_background_color | default: "#f2f0ff" }};
     }
     .free-shipping-bar__container .free-shipping-bar__filled {
-        background-color: {{ section.settings.free_shipping_progress_bar_color | default: "#afafed" }};
+        background-color: {{ settings.free_shipping_progress_bar_color | default: "#afafed" }};
     }
     .free-shipping-bar__success-message,
     .free-shipping-bar__success-message,
     .free-shipping-bar__heading{
-        color: {{ section.settings.free_shipping_text_color | default: "#000000" }};
+        color: {{ settings.free_shipping_text_color | default: "#000000" }};
 
     }
 {% endstyle %}
