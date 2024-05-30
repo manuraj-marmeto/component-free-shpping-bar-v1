@@ -1,7 +1,6 @@
 .free-shipping-bar {
     width: 100%;
     border-radius: 20px;
-    background: #f2f0ff;
     padding: 10px;
     margin: 0 0 10px 0;
 }
@@ -30,7 +29,6 @@
     height: 100%;
     border-radius: 1rem;
     transition: all .75s ease-in-out;
-    background-color: #afafed;
 }
 
 .free-shipping__icon{
