@@ -35,6 +35,11 @@ This snippet provides a dynamic Free Shipping Bar component for Shopify storefro
      		free_shipping_messsage: settings.free_shipping_messsage , 
        		free_shipping_threshold: settings.free_shipping_threshold 
 	 %}
+### step 4:
+     Navigate to the `free-shipping-bar-v1.css` file in the `Assets` folder of your Shopify theme.
+
+### step 5: 
+    Add the `free-shipping-bar-v1.css` file in `cart-drawer.liquid` or `cart.liquid` 
 
 
 ## Important Notes
