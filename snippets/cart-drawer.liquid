@@ -70,7 +70,7 @@
           {% render 'icon-close' %}
         </button>
       </div>
-      {% render "free-shipping-bar-v1" , cart: cart,free_shipping_heading:"Free Shipping", free_shipping_success_message: "You've got free shipping 👌" , free_shipping_messsage: "You're only Rs.$ away from free shipping." , free_shipping_threshold: 1000 %}
+      {% render "free-shipping-bar-v1" , cart: cart,free_shipping_heading: settings.free_shipping_heading, free_shipping_success_message: settings.free_shipping_success_message , free_shipping_messsage: settings.free_shipping_messsage , free_shipping_threshold: settings.free_shipping_threshold %}
       <cart-drawer-items
         {% if cart == empty %}
           class=" is-empty"

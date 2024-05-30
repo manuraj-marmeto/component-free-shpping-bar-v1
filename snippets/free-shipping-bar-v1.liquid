@@ -31,6 +31,11 @@
 
     }
 {% endstyle %}
+{% comment %} varaible with default value {% endcomment %}
+{% assign free_shipping_heading = free_shipping_heading | default: "Free Shipping" %}
+{% assign free_shipping_success_message = free_shipping_success_message | default: "You've got free shipping 👌" %}
+{% assign free_shipping_messsage = free_shipping_messsage | default: "You're only Rs.$ away from free shipping." %}
+{% assign free_shipping_threshold = free_shipping_threshold | default: 1000 %}
 
 {% assign cart_total = cart.total_price | divided_by: 100 %}
 {% assign free_shipping_away_price = free_shipping_threshold | minus: cart_total  %}
